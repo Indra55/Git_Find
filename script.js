@@ -4,7 +4,6 @@ document.addEventListener('DOMContentLoaded', function() {
     var primaryButtonSound = document.getElementById("primary-button-sound");
     var secondaryButtonSound = document.getElementById("secondary-button-sound");
 
-    // Function to truncate text to a specific number of words
     function truncateText(text, wordLimit) {
         const words = text.split(" ");
         if (words.length > wordLimit) {
@@ -18,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         var search = document.getElementById("search-input").value;
         var originalName = search.split(' ').join('');
-        var wordLimit = 4; // Set your word limit here
+        var wordLimit = 4; 
 
         fetch("https://api.github.com/users/" + originalName)
             .then((response) => {
